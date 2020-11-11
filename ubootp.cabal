@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5baf8c9758242f30698bfe9a028ed71d8a4fafa13d1a7d684b5d812574ee742d
+-- hash: 0c22cc141d953f3cc8891c0f8e84a575ad200ca038cbde4d227158020636f587
 
 name:           ubootp
 version:        0.1.0.0
@@ -19,7 +19,8 @@ license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
-    ChangeLog.md
+data-files:
+    app/cfg.toml
 
 source-repository head
   type: git

@@ -1,14 +1,15 @@
 name:                ubootp
-version:             0.1.0.0
-github:              "Github username here/ubootp"
-license:             BSD3
-author:              "Author name here"
-maintainer:          "Author email here"
-copyright:           "2019 Author name here"
+version:             1.0.0.0
+github:              "voneiden/ubootp"
+license:             MIT
+author:              "Matti Eiden"
+maintainer:          "n/a"
+copyright:           "2020 Matti Eiden"
 
 extra-source-files:
 - README.md
-- ChangeLog.md
+data-files:
+- app/cfg.toml
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package
