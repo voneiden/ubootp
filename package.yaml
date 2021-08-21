@@ -29,6 +29,7 @@ dependencies:
 - text
 - containers
 - ip
+- hex-text
 
 library:
   source-dirs: src

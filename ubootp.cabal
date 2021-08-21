@@ -1,20 +1,20 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.34.4.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0c22cc141d953f3cc8891c0f8e84a575ad200ca038cbde4d227158020636f587
+-- hash: b49006d29e0cec2dd97e24cc87a8d2acf28ef1a012ca2b8a545d4903ea94071a
 
 name:           ubootp
-version:        0.1.0.0
+version:        1.0.0.0
 description:    Please see the README on GitHub at <https://github.com/Github username here/ubootp#readme>
-homepage:       https://github.com/Github username here/ubootp#readme
-bug-reports:    https://github.com/Github username here/ubootp/issues
-author:         Author name here
-maintainer:     Author email here
-copyright:      2019 Author name here
-license:        BSD3
+homepage:       https://github.com/voneiden/ubootp#readme
+bug-reports:    https://github.com/voneiden/ubootp/issues
+author:         Matti Eiden
+maintainer:     n/a
+copyright:      2020 Matti Eiden
+license:        MIT
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
@@ -24,11 +24,12 @@ data-files:
 
 source-repository head
   type: git
-  location: https://github.com/Github username here/ubootp
+  location: https://github.com/voneiden/ubootp
 
 library
   exposed-modules:
       Cfg
+      Experimental
   other-modules:
       Paths_ubootp
   hs-source-dirs:
@@ -37,6 +38,7 @@ library
       base >=4.7 && <5
     , bytestring
     , containers
+    , hex-text
     , ip
     , network
     , network-multicast
@@ -55,6 +57,7 @@ executable ubootp-exe
       base >=4.7 && <5
     , bytestring
     , containers
+    , hex-text
     , ip
     , network
     , network-multicast
@@ -75,6 +78,7 @@ test-suite ubootp-test
       base >=4.7 && <5
     , bytestring
     , containers
+    , hex-text
     , ip
     , network
     , network-multicast

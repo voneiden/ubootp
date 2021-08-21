@@ -29,10 +29,11 @@ data Config = Config
   }
 
 data Ubootp = Ubootp
-  { ubootpUnicastAddress :: IPv4,
-    ubootpUnicastPort :: Integer,
+  { ubootpMulticastAddress :: IPv4,
+    ubootpMulticastPort :: Integer,
     ubootpNetmask :: IPv4,
-    ubootpGateway :: IPv4
+    ubootpGateway :: IPv4,
+    ubootpController :: IPv4
   }
 
 parseIPv4 :: Text -> Either Text IPv4
@@ -64,10 +65,11 @@ configCodec =
 ubootpCodec :: TomlCodec Ubootp
 ubootpCodec =
   Ubootp
-    <$> ipv4Codec                 "unicastAddress"  .= ubootpUnicastAddress
-    <*> Toml.diwrap (Toml.integer "unicastPort")    .= ubootpUnicastPort
+    <$> ipv4Codec                 "multicastAddress"  .= ubootpMulticastAddress
+    <*> Toml.diwrap (Toml.integer "multicastPort")    .= ubootpMulticastPort
     <*> ipv4Codec                 "netmask"         .= ubootpNetmask
     <*> ipv4Codec                 "gateway"         .= ubootpGateway
+    <*> ipv4Codec                 "controller"      .= ubootpController
 
 loadCfg :: IO Config
 loadCfg = do
